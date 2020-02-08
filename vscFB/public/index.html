@@ -1,0 +1,178 @@
+
+<html>
+
+    <head>
+
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+    </head>
+
+
+    <body>
+        <dev id = rep>
+
+
+
+        </dev>
+
+        <a  id="btnLogout" class="submit" align="center">logout</a>
+
+        <div class = "post">
+            <dev class= "main">
+          <input id="req" type="text" value="">
+            <a  id="btnReq" class="submit" align="center">submit</a>
+
+        </dev>
+    </div>
+
+    <div class = "log">
+        <div class="main">
+            <div class="imgcontainer">
+                <img src="logo.png" alt="Avatar" class="avatar">
+              </div>
+          <!-- <p class="sign" align="center">Sign in</p>--> 
+            <form class="form1">
+              <input id="txtEmail" class="un " type="text" align="center" placeholder="Username">
+              <input id="txtPassword" class="pass" type="password" align="center" placeholder="Password">
+              <a  id="btnLogin"  class="submit" align="center">Login</a>
+              <p class="forgot" align="center"><a href="#">Forgot Password?</p>       
+                <a  id="btnSignUp" class="submit" align="center">Sign up</a>
+                  
+            </div>
+    </div>
+
+
+   
+    
+   
+
+    
+
+ <!-- 
+    <div class = "signup">
+        <div class="main">
+            <p class="sign" align="center">Sign up</p>
+            <form class="form1">
+              <input id="txtEmail" class="un " type="text" align="center" placeholder="Username">
+              <input id="txtPassword" class="pass" type="password" align="center" placeholder="Password">
+              <a  id="btnSignUp" class="submit" align="center">Sign up</a>
+              <p class="forgot" align="center"><a href="#">Forgot Password?</p>       
+            </div>
+    </div>
+
+     <div class="container">
+
+            <h1 id="address">this will go away when loging in</h1>
+            <input id="txtEmail" type="email " placeholder="Email">
+
+
+            <input id="txtPassword" type="password" placeholder = "Password">
+
+            <input id="txtBio"  placeholder = "bio">
+
+            <button  class="btn info" id="btnLogin">
+                login
+            </button>
+
+            <button class="btn info" id=btnSignUp >
+                signup
+            </button>
+
+            <button  class="btn info" id="btnLogout" >
+                logout
+            </button>
+       </div>
+      
+--------------------------------------------------------------------------------------
+
+       <div id="myDIV" class="header">
+        <h2 style="margin:5px">My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+      
+      <ul id="myUL">
+        <li>Hit the gym</li>
+        <li class="checked">Pay bills</li>
+        <li>Meet George</li>
+        <li>Buy eggs</li>
+        <li>Read a book</li>
+        <li>Organize office</li>
+      </ul>
+      
+      <script>
+      // Create a "close" button and append it to each list item
+      var myNodelist = document.getElementsByTagName("LI");
+      var i;
+      for (i = 0; i < myNodelist.length; i++) {
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        myNodelist[i].appendChild(span);
+      }
+      
+      // Click on a close button to hide the current list item
+      var close = document.getElementsByClassName("close");
+      var i;
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+      
+      // Add a "checked" symbol when clicking on a list item
+      var list = document.querySelector('ul');
+      list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+          ev.target.classList.toggle('checked');
+        }
+      }, false);
+      
+      // Create a new list item when clicking on the "Add" button
+      function newElement() {
+        var li = document.createElement("li");
+        var inputValue = document.getElementById("myInput").value;
+        var t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === '') {
+          alert("You must write something!");
+        } else {
+          document.getElementById("myUL").appendChild(li);
+        }
+        document.getElementById("myInput").value = "";
+      
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+      
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+          }
+        }
+      }
+      </script>
+
+       --> 
+      
+
+       <script src="/__/firebase/7.8.0/firebase-app.js"></script>
+
+       <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+       <script src="/__/firebase/7.8.0/firebase-analytics.js"></script>
+     
+       <!-- Add Firebase products that you want to use -->
+       <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+       <script src="/__/firebase/7.8.0/firebase-firestore.js"></script>       
+            <script src="app.js"></script>
+     
+
+    </body>
+
+</html>
